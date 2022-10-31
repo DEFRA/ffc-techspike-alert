@@ -1,10 +1,10 @@
 services:
-  ffc-template-node:
+  ffc-techspike-customer-registry-alert:
     build:
       context: .
       target: production
-    image: ffc-template-node
-    container_name: ffc-template-node
+    image: ffc-techspike-customer-registry-alert
+    container_name: ffc-techspike-customer-registry-alert
     environment:
-      APPINSIGHTS_CLOUDROLE: ffc-template-node-local
+      APPINSIGHTS_CLOUDROLE: ffc-techspike-customer-registry-alert-local
       APPINSIGHTS_INSTRUMENTATIONKEY: ${APPINSIGHTS_INSTRUMENTATIONKEY}

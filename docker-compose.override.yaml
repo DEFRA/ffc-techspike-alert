@@ -2,14 +2,14 @@
 # to provide dependencies and expose ports for local testing
 
 services:
-  ffc-template-node:
+  ffc-techspike-customer-registry-alert:
     build:
       target: development
-    image: ffc-template-node-development
-    container_name: ffc-template-node-development
+    image: ffc-techspike-customer-registry-alert-development
+    container_name: ffc-techspike-customer-registry-alert-development
     ports:
-      - "3000:3000"
-      - "9229:9229"
+      - "4004:3000"
+      - "9244:9229"
     volumes:
       - ./app:/home/node/app
       - ./package.json:/home/node/package.json
