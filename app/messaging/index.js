@@ -1,19 +1,19 @@
 const { MessageReceiver } = require('ffc-messaging')
-const processDataRequest = require('./process-data-request')
-const { customerRegistryRequestQueue } = require('../config').messageQueueConfig
+const processAlertRequest = require('./process-alert-request')
+const { customerRegistryAlertRequestQueue } = require('../config').messageQueueConfig
 
-let documentGenerationReceiver
+let alertReceiver
 
 const start = async () => {
-  const documentGenerationAction = message => processDataRequest(message, documentGenerationReceiver)
-  documentGenerationReceiver = new MessageReceiver(customerRegistryRequestQueue, documentGenerationAction)
-  await documentGenerationReceiver.subscribe()
+  const alertAction = message => processAlertRequest(message, alertReceiver)
+  alertReceiver = new MessageReceiver(customerRegistryAlertRequestQueue, alertAction)
+  await alertReceiver.subscribe()
 
   console.info('Ready to receive messages')
 }
 
 const stop = async () => {
-  await documentGenerationReceiver.closeConnection()
+  await alertReceiver.closeConnection()
 }
 
 module.exports = { start, stop }
