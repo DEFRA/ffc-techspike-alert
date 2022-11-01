@@ -1,5 +1,6 @@
 const Joi = require('joi')
 const messageQueueConfig = require('./message-queue')
+const notifyConfig = require('./notify')
 
 const schema = Joi.object({
   port: Joi.number().default(3005),
@@ -20,5 +21,6 @@ if (error) {
 }
 
 value.messageQueueConfig = messageQueueConfig
+value.notifyConfig = notifyConfig
 
 module.exports = value
