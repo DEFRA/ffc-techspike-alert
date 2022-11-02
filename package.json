@@ -1,6 +1,6 @@
 {
   "name": "ffc-techspike-customer-registry-alert",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Alert service for customer registry",
   "homepage": "https://github.com/DEFRA/ffc-techspike-customer-registry-alert",
   "main": "app/index.js",
