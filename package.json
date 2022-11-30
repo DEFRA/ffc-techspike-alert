@@ -1,6 +1,6 @@
 {
   "name": "ffc-techspike-customer-registry-alert",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Alert service for customer registry",
   "homepage": "https://github.com/DEFRA/ffc-techspike-customer-registry-alert",
   "main": "app/index.js",
@@ -18,7 +18,11 @@
   "license": "OGL-UK-3.0",
   "dependencies": {
     "@hapi/hapi": "^20.2.1",
-    "applicationinsights": "^2.2.1"
+    "hapi-pino": "10.1.0",
+    "@hapi/boom": "10.0.0",
+    "applicationinsights": "^2.2.1",
+    "ffc-messaging": "2.5.1",
+    "notifications-node-client": "^5.1.1"
   },
   "devDependencies": {
     "jest": "^27.5.1",

@@ -1,5 +1,5 @@
 apiVersion: v2
-description: Alert sercive fro customer registry
+description: Alert service fro customer registry
 name: ffc-techspike-customer-registry-alert
 # this version is automatically updated in the build pipline
 version: 1.0.0
